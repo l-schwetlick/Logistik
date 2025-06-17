@@ -1,6 +1,6 @@
 ﻿namespace Logistik
 {
-    partial class Form1
+    partial class Lager_Haus
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,7 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lager_Haus));
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Keller");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Küche");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Garage");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Räume", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Werkzeuge");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Lebensmittel");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kategorien", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nachfüllen");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Ausgemustert");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Status", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnDatei = new System.Windows.Forms.ToolStripButton();
             this.btnBearbeiten = new System.Windows.Forms.ToolStripButton();
@@ -36,16 +53,18 @@
             this.btnHilfe = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnArtikel = new System.Windows.Forms.ToolStripButton();
-            this.btnLager = new System.Windows.Forms.ToolStripButton();
-            this.btnAufträge = new System.Windows.Forms.ToolStripButton();
+            this.btnLagerorte = new System.Windows.Forms.ToolStripButton();
+            this.btnAufgaben = new System.Windows.Forms.ToolStripButton();
             this.treeNavigation = new System.Windows.Forms.TreeView();
-            this.Navigationsbereich = new System.Windows.Forms.Label();
-            this.dataAusgabe = new System.Windows.Forms.DataGridView();
-            this.Ausgabe = new System.Windows.Forms.Label();
+            this.Navigation = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tabRegister = new System.Windows.Forms.TabControl();
+            this.tabLagerbestand = new System.Windows.Forms.TabPage();
+            this.tabAufgaben = new System.Windows.Forms.TabPage();
+            this.tabDashboard = new System.Windows.Forms.TabPage();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAusgabe)).BeginInit();
+            this.tabRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -104,8 +123,8 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnArtikel,
-            this.btnLager,
-            this.btnAufträge});
+            this.btnLagerorte,
+            this.btnAufgaben});
             this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1000, 25);
@@ -122,58 +141,65 @@
             this.btnArtikel.Size = new System.Drawing.Size(45, 22);
             this.btnArtikel.Text = "Artikel";
             // 
-            // btnLager
+            // btnLagerorte
             // 
-            this.btnLager.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnLager.Image = ((System.Drawing.Image)(resources.GetObject("btnLager.Image")));
-            this.btnLager.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLager.Name = "btnLager";
-            this.btnLager.Size = new System.Drawing.Size(40, 22);
-            this.btnLager.Text = "Lager";
+            this.btnLagerorte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnLagerorte.Image = ((System.Drawing.Image)(resources.GetObject("btnLagerorte.Image")));
+            this.btnLagerorte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLagerorte.Name = "btnLagerorte";
+            this.btnLagerorte.Size = new System.Drawing.Size(61, 22);
+            this.btnLagerorte.Text = "Lagerorte";
             // 
-            // btnAufträge
+            // btnAufgaben
             // 
-            this.btnAufträge.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAufträge.Image = ((System.Drawing.Image)(resources.GetObject("btnAufträge.Image")));
-            this.btnAufträge.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAufträge.Name = "btnAufträge";
-            this.btnAufträge.Size = new System.Drawing.Size(57, 22);
-            this.btnAufträge.Text = "Aufträge";
+            this.btnAufgaben.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAufgaben.Image = ((System.Drawing.Image)(resources.GetObject("btnAufgaben.Image")));
+            this.btnAufgaben.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAufgaben.Name = "btnAufgaben";
+            this.btnAufgaben.Size = new System.Drawing.Size(63, 22);
+            this.btnAufgaben.Text = "Aufgaben";
             // 
             // treeNavigation
             // 
-            this.treeNavigation.Location = new System.Drawing.Point(9, 65);
+            this.treeNavigation.Location = new System.Drawing.Point(11, 64);
             this.treeNavigation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeNavigation.Name = "treeNavigation";
+            treeNode1.Name = "knotenKeller";
+            treeNode1.Text = "Keller";
+            treeNode2.Name = "knotenKüche";
+            treeNode2.Text = "Küche";
+            treeNode3.Name = "knotenGarage";
+            treeNode3.Text = "Garage";
+            treeNode4.Name = "knotenRäume";
+            treeNode4.Text = "Räume";
+            treeNode5.Name = "knotenWerkzeuge";
+            treeNode5.Text = "Werkzeuge";
+            treeNode6.Name = "knotenLebensmittel";
+            treeNode6.Text = "Lebensmittel";
+            treeNode7.Name = "knotenKategorien";
+            treeNode7.Text = "Kategorien";
+            treeNode8.Name = "knotenNachfüllen";
+            treeNode8.Text = "Nachfüllen";
+            treeNode9.Name = "knotenAusgemustert";
+            treeNode9.Text = "Ausgemustert";
+            treeNode10.Name = "knotenStatus";
+            treeNode10.Text = "Status";
+            this.treeNavigation.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode7,
+            treeNode10});
             this.treeNavigation.Size = new System.Drawing.Size(171, 389);
             this.treeNavigation.TabIndex = 2;
             this.treeNavigation.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeNavigation_AfterSelect);
             // 
-            // Navigationsbereich
+            // Navigation
             // 
-            this.Navigationsbereich.AutoSize = true;
-            this.Navigationsbereich.Location = new System.Drawing.Point(6, 50);
-            this.Navigationsbereich.Name = "Navigationsbereich";
-            this.Navigationsbereich.Size = new System.Drawing.Size(101, 13);
-            this.Navigationsbereich.TabIndex = 3;
-            this.Navigationsbereich.Text = "Navigationsbereich:";
-            // 
-            // dataAusgabe
-            // 
-            this.dataAusgabe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataAusgabe.Location = new System.Drawing.Point(185, 65);
-            this.dataAusgabe.Name = "dataAusgabe";
-            this.dataAusgabe.Size = new System.Drawing.Size(803, 388);
-            this.dataAusgabe.TabIndex = 4;
-            // 
-            // Ausgabe
-            // 
-            this.Ausgabe.AutoSize = true;
-            this.Ausgabe.Location = new System.Drawing.Point(182, 49);
-            this.Ausgabe.Name = "Ausgabe";
-            this.Ausgabe.Size = new System.Drawing.Size(52, 13);
-            this.Ausgabe.TabIndex = 5;
-            this.Ausgabe.Text = "Ausgabe:";
+            this.Navigation.AutoSize = true;
+            this.Navigation.Location = new System.Drawing.Point(6, 50);
+            this.Navigation.Name = "Navigation";
+            this.Navigation.Size = new System.Drawing.Size(61, 13);
+            this.Navigation.TabIndex = 3;
+            this.Navigation.Text = "Navigation:";
             // 
             // statusStrip1
             // 
@@ -183,27 +209,67 @@
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // Form1
+            // tabRegister
+            // 
+            this.tabRegister.Controls.Add(this.tabLagerbestand);
+            this.tabRegister.Controls.Add(this.tabAufgaben);
+            this.tabRegister.Controls.Add(this.tabDashboard);
+            this.tabRegister.Location = new System.Drawing.Point(187, 50);
+            this.tabRegister.Name = "tabRegister";
+            this.tabRegister.SelectedIndex = 0;
+            this.tabRegister.Size = new System.Drawing.Size(801, 403);
+            this.tabRegister.TabIndex = 7;
+            // 
+            // tabLagerbestand
+            // 
+            this.tabLagerbestand.BackColor = System.Drawing.Color.Transparent;
+            this.tabLagerbestand.Location = new System.Drawing.Point(4, 22);
+            this.tabLagerbestand.Name = "tabLagerbestand";
+            this.tabLagerbestand.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLagerbestand.Size = new System.Drawing.Size(793, 377);
+            this.tabLagerbestand.TabIndex = 0;
+            this.tabLagerbestand.Text = "Lagerbestand";
+            // 
+            // tabAufgaben
+            // 
+            this.tabAufgaben.Location = new System.Drawing.Point(4, 22);
+            this.tabAufgaben.Name = "tabAufgaben";
+            this.tabAufgaben.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAufgaben.Size = new System.Drawing.Size(793, 377);
+            this.tabAufgaben.TabIndex = 1;
+            this.tabAufgaben.Text = "Aufgaben";
+            this.tabAufgaben.UseVisualStyleBackColor = true;
+            // 
+            // tabDashboard
+            // 
+            this.tabDashboard.Location = new System.Drawing.Point(4, 22);
+            this.tabDashboard.Name = "tabDashboard";
+            this.tabDashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDashboard.Size = new System.Drawing.Size(793, 377);
+            this.tabDashboard.TabIndex = 2;
+            this.tabDashboard.Text = "Dashboard";
+            this.tabDashboard.UseVisualStyleBackColor = true;
+            // 
+            // Lager_Haus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 478);
+            this.Controls.Add(this.tabRegister);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.Ausgabe);
-            this.Controls.Add(this.dataAusgabe);
-            this.Controls.Add(this.Navigationsbereich);
+            this.Controls.Add(this.Navigation);
             this.Controls.Add(this.treeNavigation);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Logistik - Megamat";
+            this.Name = "Lager_Haus";
+            this.Text = "Logistik - Haus";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAusgabe)).EndInit();
+            this.tabRegister.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,13 +284,15 @@
         private System.Windows.Forms.ToolStripButton btnHilfe;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnArtikel;
-        private System.Windows.Forms.ToolStripButton btnLager;
-        private System.Windows.Forms.ToolStripButton btnAufträge;
+        private System.Windows.Forms.ToolStripButton btnLagerorte;
+        private System.Windows.Forms.ToolStripButton btnAufgaben;
         private System.Windows.Forms.TreeView treeNavigation;
-        private System.Windows.Forms.Label Navigationsbereich;
-        private System.Windows.Forms.DataGridView dataAusgabe;
-        private System.Windows.Forms.Label Ausgabe;
+        private System.Windows.Forms.Label Navigation;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TabControl tabRegister;
+        private System.Windows.Forms.TabPage tabLagerbestand;
+        private System.Windows.Forms.TabPage tabAufgaben;
+        private System.Windows.Forms.TabPage tabDashboard;
     }
 }
 
