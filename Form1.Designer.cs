@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lager_Haus));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Keller");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Küche");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Garage");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Räume", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Werkzeuge");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Lebensmittel");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kategorien", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nachfüllen");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Ausgemustert");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Status", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Keller");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Küche");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Garage");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Räume", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Werkzeuge");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Lebensmittel");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Kategorien", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Nachfüllen");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Ausgemustert");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Status", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19});
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnDatei = new System.Windows.Forms.ToolStripButton();
             this.btnBearbeiten = new System.Windows.Forms.ToolStripButton();
@@ -162,30 +162,30 @@
             this.treeNavigation.Location = new System.Drawing.Point(11, 64);
             this.treeNavigation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeNavigation.Name = "treeNavigation";
-            treeNode1.Name = "knotenKeller";
-            treeNode1.Text = "Keller";
-            treeNode2.Name = "knotenKüche";
-            treeNode2.Text = "Küche";
-            treeNode3.Name = "knotenGarage";
-            treeNode3.Text = "Garage";
-            treeNode4.Name = "knotenRäume";
-            treeNode4.Text = "Räume";
-            treeNode5.Name = "knotenWerkzeuge";
-            treeNode5.Text = "Werkzeuge";
-            treeNode6.Name = "knotenLebensmittel";
-            treeNode6.Text = "Lebensmittel";
-            treeNode7.Name = "knotenKategorien";
-            treeNode7.Text = "Kategorien";
-            treeNode8.Name = "knotenNachfüllen";
-            treeNode8.Text = "Nachfüllen";
-            treeNode9.Name = "knotenAusgemustert";
-            treeNode9.Text = "Ausgemustert";
-            treeNode10.Name = "knotenStatus";
-            treeNode10.Text = "Status";
+            treeNode11.Name = "knotenKeller";
+            treeNode11.Text = "Keller";
+            treeNode12.Name = "knotenKüche";
+            treeNode12.Text = "Küche";
+            treeNode13.Name = "knotenGarage";
+            treeNode13.Text = "Garage";
+            treeNode14.Name = "knotenRäume";
+            treeNode14.Text = "Räume";
+            treeNode15.Name = "knotenWerkzeuge";
+            treeNode15.Text = "Werkzeuge";
+            treeNode16.Name = "knotenLebensmittel";
+            treeNode16.Text = "Lebensmittel";
+            treeNode17.Name = "knotenKategorien";
+            treeNode17.Text = "Kategorien";
+            treeNode18.Name = "knotenNachfüllen";
+            treeNode18.Text = "Nachfüllen";
+            treeNode19.Name = "knotenAusgemustert";
+            treeNode19.Text = "Ausgemustert";
+            treeNode20.Name = "knotenStatus";
+            treeNode20.Text = "Status";
             this.treeNavigation.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode7,
-            treeNode10});
+            treeNode14,
+            treeNode17,
+            treeNode20});
             this.treeNavigation.Size = new System.Drawing.Size(171, 389);
             this.treeNavigation.TabIndex = 2;
             this.treeNavigation.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeNavigation_AfterSelect);
@@ -238,7 +238,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Lager_Haus";
-            this.Text = "Logistik - Megamat";
+            this.Text = "Logistik - Haus";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
