@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lager_Haus));
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Keller");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Küche");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Garage");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Räume", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12,
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Werkzeuge");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Lebensmittel");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Kategorien", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16});
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Nachfüllen");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Ausgemustert");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Status", new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode19});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Keller");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Küche");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Garage");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Räume", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Werkzeuge");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Lebensmittel");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Kategorien", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nachfüllen");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Ausgemustert");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Status", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnDatei = new System.Windows.Forms.ToolStripButton();
             this.btnBearbeiten = new System.Windows.Forms.ToolStripButton();
@@ -57,12 +57,14 @@
             this.btnAufgaben = new System.Windows.Forms.ToolStripButton();
             this.treeNavigation = new System.Windows.Forms.TreeView();
             this.Navigation = new System.Windows.Forms.Label();
-            this.dataAusgabe = new System.Windows.Forms.DataGridView();
-            this.Hauptbereich = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tabRegister = new System.Windows.Forms.TabControl();
+            this.tabLagerbestand = new System.Windows.Forms.TabPage();
+            this.tabAufgaben = new System.Windows.Forms.TabPage();
+            this.tabDashboard = new System.Windows.Forms.TabPage();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAusgabe)).BeginInit();
+            this.tabRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -162,30 +164,30 @@
             this.treeNavigation.Location = new System.Drawing.Point(11, 64);
             this.treeNavigation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeNavigation.Name = "treeNavigation";
-            treeNode11.Name = "knotenKeller";
-            treeNode11.Text = "Keller";
-            treeNode12.Name = "knotenKüche";
-            treeNode12.Text = "Küche";
-            treeNode13.Name = "knotenGarage";
-            treeNode13.Text = "Garage";
-            treeNode14.Name = "knotenRäume";
-            treeNode14.Text = "Räume";
-            treeNode15.Name = "knotenWerkzeuge";
-            treeNode15.Text = "Werkzeuge";
-            treeNode16.Name = "knotenLebensmittel";
-            treeNode16.Text = "Lebensmittel";
-            treeNode17.Name = "knotenKategorien";
-            treeNode17.Text = "Kategorien";
-            treeNode18.Name = "knotenNachfüllen";
-            treeNode18.Text = "Nachfüllen";
-            treeNode19.Name = "knotenAusgemustert";
-            treeNode19.Text = "Ausgemustert";
-            treeNode20.Name = "knotenStatus";
-            treeNode20.Text = "Status";
+            treeNode1.Name = "knotenKeller";
+            treeNode1.Text = "Keller";
+            treeNode2.Name = "knotenKüche";
+            treeNode2.Text = "Küche";
+            treeNode3.Name = "knotenGarage";
+            treeNode3.Text = "Garage";
+            treeNode4.Name = "knotenRäume";
+            treeNode4.Text = "Räume";
+            treeNode5.Name = "knotenWerkzeuge";
+            treeNode5.Text = "Werkzeuge";
+            treeNode6.Name = "knotenLebensmittel";
+            treeNode6.Text = "Lebensmittel";
+            treeNode7.Name = "knotenKategorien";
+            treeNode7.Text = "Kategorien";
+            treeNode8.Name = "knotenNachfüllen";
+            treeNode8.Text = "Nachfüllen";
+            treeNode9.Name = "knotenAusgemustert";
+            treeNode9.Text = "Ausgemustert";
+            treeNode10.Name = "knotenStatus";
+            treeNode10.Text = "Status";
             this.treeNavigation.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode17,
-            treeNode20});
+            treeNode4,
+            treeNode7,
+            treeNode10});
             this.treeNavigation.Size = new System.Drawing.Size(171, 389);
             this.treeNavigation.TabIndex = 2;
             this.treeNavigation.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeNavigation_AfterSelect);
@@ -199,23 +201,6 @@
             this.Navigation.TabIndex = 3;
             this.Navigation.Text = "Navigation:";
             // 
-            // dataAusgabe
-            // 
-            this.dataAusgabe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataAusgabe.Location = new System.Drawing.Point(185, 65);
-            this.dataAusgabe.Name = "dataAusgabe";
-            this.dataAusgabe.Size = new System.Drawing.Size(803, 388);
-            this.dataAusgabe.TabIndex = 4;
-            // 
-            // Hauptbereich
-            // 
-            this.Hauptbereich.AutoSize = true;
-            this.Hauptbereich.Location = new System.Drawing.Point(182, 49);
-            this.Hauptbereich.Name = "Hauptbereich";
-            this.Hauptbereich.Size = new System.Drawing.Size(74, 13);
-            this.Hauptbereich.TabIndex = 5;
-            this.Hauptbereich.Text = "Hauptbereich:";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 456);
@@ -224,14 +209,54 @@
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // tabRegister
+            // 
+            this.tabRegister.Controls.Add(this.tabLagerbestand);
+            this.tabRegister.Controls.Add(this.tabAufgaben);
+            this.tabRegister.Controls.Add(this.tabDashboard);
+            this.tabRegister.Location = new System.Drawing.Point(187, 50);
+            this.tabRegister.Name = "tabRegister";
+            this.tabRegister.SelectedIndex = 0;
+            this.tabRegister.Size = new System.Drawing.Size(801, 403);
+            this.tabRegister.TabIndex = 7;
+            // 
+            // tabLagerbestand
+            // 
+            this.tabLagerbestand.BackColor = System.Drawing.Color.Transparent;
+            this.tabLagerbestand.Location = new System.Drawing.Point(4, 22);
+            this.tabLagerbestand.Name = "tabLagerbestand";
+            this.tabLagerbestand.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLagerbestand.Size = new System.Drawing.Size(793, 377);
+            this.tabLagerbestand.TabIndex = 0;
+            this.tabLagerbestand.Text = "Lagerbestand";
+            // 
+            // tabAufgaben
+            // 
+            this.tabAufgaben.Location = new System.Drawing.Point(4, 22);
+            this.tabAufgaben.Name = "tabAufgaben";
+            this.tabAufgaben.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAufgaben.Size = new System.Drawing.Size(793, 377);
+            this.tabAufgaben.TabIndex = 1;
+            this.tabAufgaben.Text = "Aufgaben";
+            this.tabAufgaben.UseVisualStyleBackColor = true;
+            // 
+            // tabDashboard
+            // 
+            this.tabDashboard.Location = new System.Drawing.Point(4, 22);
+            this.tabDashboard.Name = "tabDashboard";
+            this.tabDashboard.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDashboard.Size = new System.Drawing.Size(793, 377);
+            this.tabDashboard.TabIndex = 2;
+            this.tabDashboard.Text = "Dashboard";
+            this.tabDashboard.UseVisualStyleBackColor = true;
+            // 
             // Lager_Haus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 478);
+            this.Controls.Add(this.tabRegister);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.Hauptbereich);
-            this.Controls.Add(this.dataAusgabe);
             this.Controls.Add(this.Navigation);
             this.Controls.Add(this.treeNavigation);
             this.Controls.Add(this.toolStrip2);
@@ -244,7 +269,7 @@
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAusgabe)).EndInit();
+            this.tabRegister.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,9 +288,11 @@
         private System.Windows.Forms.ToolStripButton btnAufgaben;
         private System.Windows.Forms.TreeView treeNavigation;
         private System.Windows.Forms.Label Navigation;
-        private System.Windows.Forms.DataGridView dataAusgabe;
-        private System.Windows.Forms.Label Hauptbereich;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TabControl tabRegister;
+        private System.Windows.Forms.TabPage tabLagerbestand;
+        private System.Windows.Forms.TabPage tabAufgaben;
+        private System.Windows.Forms.TabPage tabDashboard;
     }
 }
 
