@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Logistik
 {
-    public partial class Form1 : Form
+    public partial class Lager_Haus : Form
     {
-        public Form1()
+        public Lager_Haus()
         {
             InitializeComponent();
         }
@@ -33,6 +33,7 @@ namespace Logistik
         }
         private void treeNavigation_AfterSelect(object sender, TreeViewEventArgs e)
         {
+
         }
 
     }
